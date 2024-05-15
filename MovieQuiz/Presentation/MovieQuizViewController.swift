@@ -8,6 +8,10 @@ final class MovieQuizViewController:
     private var currentQuestionIndex = 0
     private var correctAnswers = 0
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let currentQuestion = questions[currentQuestionIndex]
