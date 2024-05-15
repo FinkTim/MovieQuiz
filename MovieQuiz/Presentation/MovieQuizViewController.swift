@@ -115,25 +115,25 @@ final class MovieQuizViewController:
         if isCorrect {
             correctAnswers+=1
         }
-        imageView.layer.masksToBounds = true // 1
-        imageView.layer.borderWidth = 8 // 2
+        imageView.layer.masksToBounds = true
+        imageView.layer.borderWidth = 8
         imageView.layer.borderColor = isCorrect ? UIColor.ypGreen.cgColor : UIColor.ypRed.cgColor
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-           // код, который мы хотим вызвать через 1 секунду
            self.showNextQuestionOrResults()
         }
     }
     
     private func showNextQuestionOrResults() {
-        if currentQuestionIndex == questions.count - 1 { // 1
-            let text = "Ваш результат: \(correctAnswers)/10" // 1
-            let viewModel = QuizResultsViewModel( // 2
+        if currentQuestionIndex == questions.count - 1 {
+            let text = "Ваш результат: \(correctAnswers)/10"
+            let viewModel = QuizResultsViewModel(
                 title: "Этот раунд окончен!",
                 text: text,
                 buttonText: "Сыграть ещё раз")
             show(quiz: viewModel)
-        } else { // 2
+        } else {
             currentQuestionIndex += 1
+            imageView.layer.borderWidth = 0
             let nextQuestion = questions[currentQuestionIndex]
             let viewModel = convert(model: nextQuestion)
                     
