@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Lic-0y-4HF"; */
+"Lic-0y-4HF.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Нет"; ObjectID = "ftL-eW-2Qt"; */
+"ftL-eW-2Qt.normalTitle" = "Нет";
+
+/* Class = "UIButton"; normalTitle = "Да"; ObjectID = "v6i-Mh-S7l"; */
+"v6i-Mh-S7l.normalTitle" = "Да";
