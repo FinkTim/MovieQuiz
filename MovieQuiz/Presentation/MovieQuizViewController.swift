@@ -139,7 +139,6 @@ final class MovieQuizViewController:
             show(quiz: viewModel)
         } else {
             currentQuestionIndex += 1
-            imageView.layer.borderWidth = 0
             let nextQuestion = questions[currentQuestionIndex]
             let viewModel = convert(model: nextQuestion)
                     
@@ -148,6 +147,7 @@ final class MovieQuizViewController:
             yesButton.isEnabled = true
             noButton.isEnabled = true
         }
+        imageView.layer.borderWidth = 0
     }
 
     @IBAction private func noButtonClicked(_ sender: UIButton) {
